@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.ligx.demo'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'io.netty:netty-all:4.1.20.Final'
+    // java object layout --> java对象布局
+    compile group: 'org.openjdk.jol', name: 'jol-core', version: '0.14'
+}
